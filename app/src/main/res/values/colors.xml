@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Azul Pastel Oscuro -->
+    <color name="primary">#7B9FB8</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#3D5A6B</color>
+    <color name="on_primary_container">#D8E8F0</color>
+
+    <!-- Secondary Colors - Azul Grisáceo -->
+    <color name="secondary">#8BA8B8</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#3D4A54</color>
+    <color name="on_secondary_container">#D8E0E8</color>
+
+    <!-- Tertiary Colors - Azul Verdoso -->
+    <color name="tertiary">#7BB8A8</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="tertiary_container">#3D5A54</color>
+    <color name="on_tertiary_container">#D8F0E8</color>
+
+    <!-- Error Colors -->
+    <color name="error">#E89B9B</color>
+    <color name="error_container">#5C3A3A</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="on_error_container">#F5E8E8</color>
+
+    <!-- Background Colors - Azul Oscuro -->
+    <color name="background">#0F1419</color>
+    <color name="on_background">#E0E8F0</color>
+    <color name="surface">#0F1419</color>
+    <color name="on_surface">#E0E8F0</color>
+    <color name="surface_variant">#1A2530</color>
+    <color name="on_surface_variant">#B8C8D8</color>
+
+    <!-- Outline Colors -->
+    <color name="outline">#6B7B8B</color>
+    <color name="outline_variant">#3D4A54</color>
+
+    <!-- Inverse Colors -->
+    <color name="surface_inverse">#E0E8F0</color>
+    <color name="on_surface_inverse">#1A2530</color>
+    <color name="primary_inverse">#A8C8E0</color>
+
+    <!-- Additional Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Gradient Colors - Azul Pastel Oscuro -->
+    <color name="gradient_start">#1A2530</color>
+    <color name="gradient_middle">#2A3A48</color>
+    <color name="gradient_end">#3D5A6B</color>
+
+    <!-- Card Colors - Azul Oscuro -->
+    <color name="card_background">#1A2530</color>
+    <color name="card_background_variant">#2A3A48</color>
+    <color name="card_background_hover">#3D4A54</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_blue">#5B9FD8</color>
+    <color name="accent_cyan">#5BD8C8</color>
+</resources>

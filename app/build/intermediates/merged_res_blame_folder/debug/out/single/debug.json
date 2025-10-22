@@ -1,0 +1,222 @@
+[
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_controls_background_top.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\controls_background_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_storage.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_storage.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_folder.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_folder.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_video_library.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_video_library.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-xhdpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_subtitles.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_subtitles.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/drawable_duration_badge_modern.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/drawable/duration_badge_modern.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_play_arrow.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_play_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_controls_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\controls_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_fullscreen.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_fullscreen.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_tab_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\tab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_replay_10.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_replay_10.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/layout_activity_player.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/layout/activity_player.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-mdpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-xxxhdpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_gradient_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\gradient_background.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/drawable_play_button_modern.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/drawable/play_button_modern.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_lock_open.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_lock_open.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-xhdpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_circular_button_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\circular_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-hdpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_favorite.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-hdpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_duration_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\duration_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_play_pause_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\play_pause_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_thumbnail_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\thumbnail_background.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/layout_activity_main.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\layout_item_video.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\layout\\item_video.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_play_icon_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\play_icon_background.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/drawable_ic_rotate.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/drawable/ic_rotate.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_forward_10.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_forward_10.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-mdpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/drawable_thumbnail_overlay.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/drawable/thumbnail_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_favorite_border.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_favorite_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-xxhdpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/drawable_player_button_background.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/drawable/player_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\layout_activity_player.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\layout\\activity_player.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/color_chip_background_selector.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/color/chip_background_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_more_vert.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_more_vert.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\layout_custom_player_controls.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\layout\\custom_player_controls.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "com.daven.videoplayer.app-merged_res-45:/layout_item_video.xml.flat",
+        "source": "com.daven.videoplayer.app-main-47:/layout/item_video.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_control_button_background.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\control_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-merged_res-45:\\drawable_ic_lock.xml.flat",
+        "source": "C:\\Users\\david\\.gradle\\daemon\\8.4\\com.daven.videoplayer.app-main-47:\\drawable\\ic_lock.xml"
+    }
+]
