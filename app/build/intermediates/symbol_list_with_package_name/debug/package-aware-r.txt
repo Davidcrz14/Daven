@@ -3248,6 +3248,15 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable media3_icon_circular_play
+drawable media3_notification_pause
+drawable media3_notification_play
+drawable media3_notification_seek_back
+drawable media3_notification_seek_forward
+drawable media3_notification_seek_to_next
+drawable media3_notification_seek_to_previous
+drawable media3_notification_small_icon
+drawable media_session_service_notification_ic_music_note
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3391,6 +3400,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appName
 id arc
 id asConfigured
 id async
@@ -3622,6 +3632,9 @@ id linear
 id listMode
 id list_item
 id loadingProgress
+id lockButton
+id logoImage
+id loopButton
 id m3_side_sheet
 id marquee
 id masked
@@ -3744,6 +3757,7 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3821,6 +3835,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id subtitle
 id supportScrollUp
 id surface_view
 id tabMode
@@ -4022,6 +4037,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_player
+layout activity_splash
 layout custom_dialog
 layout custom_player_controls
 layout design_bottom_navigation_item
@@ -4158,6 +4174,9 @@ string all
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string aspect_ratio
+string audio_only_mode
+string authentication_required
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -4175,6 +4194,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string default_notification_channel_name
 string duration_format
 string error_a11y_label
 string error_icon_content_description
@@ -4242,6 +4262,8 @@ string icon_content_description
 string item_view_role_description
 string loading_videos
 string lock_screen
+string loop_disabled
+string loop_enabled
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4280,6 +4302,12 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string media3_controls_pause_description
+string media3_controls_play_description
+string media3_controls_seek_back_description
+string media3_controls_seek_forward_description
+string media3_controls_seek_to_next_description
+string media3_controls_seek_to_previous_description
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -4350,6 +4378,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_message
 string permission_required
+string playing_audio
 string recent
 string search_menu_title
 string search_videos
@@ -4359,6 +4388,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string unlock_screen
 string video_player
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -4944,6 +4974,7 @@ style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
 style Theme_Daven
 style Theme_Daven_Fullscreen
+style Theme_Daven_Splash
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light

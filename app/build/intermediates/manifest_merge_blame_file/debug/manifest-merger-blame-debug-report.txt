@@ -17,197 +17,226 @@
 13    <uses-permission android:name="android.permission.WAKE_LOCK" />
 13-->D:\Daven\app\src\main\AndroidManifest.xml:7:5-68
 13-->D:\Daven\app\src\main\AndroidManifest.xml:7:22-65
-14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[androidx.media3:media3-exoplayer:1.2.1] C:\Users\david\.gradle\caches\transforms-3\a525846e71ed9b9b2b09212c5a632f35\transformed\media3-exoplayer-1.2.1\AndroidManifest.xml:22:5-79
-14-->[androidx.media3:media3-exoplayer:1.2.1] C:\Users\david\.gradle\caches\transforms-3\a525846e71ed9b9b2b09212c5a632f35\transformed\media3-exoplayer-1.2.1\AndroidManifest.xml:22:22-76
-15
-16    <permission
-16-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
-17        android:name="com.daven.videoplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-17-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-18        android:protectionLevel="signature" />
-18-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
-19
-20    <uses-permission android:name="com.daven.videoplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-20-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-20-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+14-->D:\Daven\app\src\main\AndroidManifest.xml:8:5-77
+14-->D:\Daven\app\src\main\AndroidManifest.xml:8:22-74
+15    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+15-->D:\Daven\app\src\main\AndroidManifest.xml:9:5-77
+15-->D:\Daven\app\src\main\AndroidManifest.xml:9:22-74
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[androidx.media3:media3-exoplayer:1.2.1] C:\Users\david\.gradle\caches\transforms-3\a525846e71ed9b9b2b09212c5a632f35\transformed\media3-exoplayer-1.2.1\AndroidManifest.xml:22:5-79
+16-->[androidx.media3:media3-exoplayer:1.2.1] C:\Users\david\.gradle\caches\transforms-3\a525846e71ed9b9b2b09212c5a632f35\transformed\media3-exoplayer-1.2.1\AndroidManifest.xml:22:22-76
+17
+18    <permission
+18-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+19        android:name="com.daven.videoplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 21
-22    <application
-22-->D:\Daven\app\src\main\AndroidManifest.xml:9:5-59:19
-23        android:allowBackup="true"
-23-->D:\Daven\app\src\main\AndroidManifest.xml:10:9-35
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
-25        android:dataExtractionRules="@xml/data_extraction_rules"
-25-->D:\Daven\app\src\main\AndroidManifest.xml:11:9-65
-26        android:debuggable="true"
-27        android:extractNativeLibs="false"
-28        android:fullBackupContent="@xml/backup_rules"
-28-->D:\Daven\app\src\main\AndroidManifest.xml:12:9-54
-29        android:icon="@mipmap/ic_launcher"
-29-->D:\Daven\app\src\main\AndroidManifest.xml:13:9-43
-30        android:label="@string/app_name"
-30-->D:\Daven\app\src\main\AndroidManifest.xml:14:9-41
-31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->D:\Daven\app\src\main\AndroidManifest.xml:15:9-54
-32        android:supportsRtl="true"
-32-->D:\Daven\app\src\main\AndroidManifest.xml:16:9-35
-33        android:theme="@style/Theme.Daven" >
-33-->D:\Daven\app\src\main\AndroidManifest.xml:17:9-43
-34        <activity
-34-->D:\Daven\app\src\main\AndroidManifest.xml:20:9-50:20
-35            android:name="com.daven.videoplayer.ui.MainActivity"
-35-->D:\Daven\app\src\main\AndroidManifest.xml:21:13-44
-36            android:exported="true"
-36-->D:\Daven\app\src\main\AndroidManifest.xml:22:13-36
-37            android:theme="@style/Theme.Daven" >
-37-->D:\Daven\app\src\main\AndroidManifest.xml:23:13-47
-38            <intent-filter>
-38-->D:\Daven\app\src\main\AndroidManifest.xml:24:13-27:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->D:\Daven\app\src\main\AndroidManifest.xml:25:17-69
-39-->D:\Daven\app\src\main\AndroidManifest.xml:25:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->D:\Daven\app\src\main\AndroidManifest.xml:26:17-77
-41-->D:\Daven\app\src\main\AndroidManifest.xml:26:27-74
-42            </intent-filter>
-43
-44            <!-- Intent filters para ser reproductor predeterminado -->
-45            <intent-filter>
-45-->D:\Daven\app\src\main\AndroidManifest.xml:30:13-37:29
-46                <action android:name="android.intent.action.VIEW" />
-46-->D:\Daven\app\src\main\AndroidManifest.xml:31:17-69
-46-->D:\Daven\app\src\main\AndroidManifest.xml:31:25-66
-47
-48                <category android:name="android.intent.category.DEFAULT" />
-48-->D:\Daven\app\src\main\AndroidManifest.xml:32:17-76
-48-->D:\Daven\app\src\main\AndroidManifest.xml:32:27-73
-49                <category android:name="android.intent.category.BROWSABLE" />
-49-->D:\Daven\app\src\main\AndroidManifest.xml:33:17-78
-49-->D:\Daven\app\src\main\AndroidManifest.xml:33:27-75
-50
-51                <data android:scheme="file" />
-51-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-51-->D:\Daven\app\src\main\AndroidManifest.xml:34:23-44
-52                <data android:scheme="content" />
-52-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-52-->D:\Daven\app\src\main\AndroidManifest.xml:34:23-44
-53                <data android:mimeType="video/*" />
-53-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-53-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-54            </intent-filter>
-55            <intent-filter>
-55-->D:\Daven\app\src\main\AndroidManifest.xml:39:13-49:29
-56                <action android:name="android.intent.action.VIEW" />
-56-->D:\Daven\app\src\main\AndroidManifest.xml:31:17-69
-56-->D:\Daven\app\src\main\AndroidManifest.xml:31:25-66
-57
-58                <category android:name="android.intent.category.DEFAULT" />
-58-->D:\Daven\app\src\main\AndroidManifest.xml:32:17-76
-58-->D:\Daven\app\src\main\AndroidManifest.xml:32:27-73
+22    <uses-permission android:name="com.daven.videoplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+23
+24    <application
+24-->D:\Daven\app\src\main\AndroidManifest.xml:11:5-75:19
+25        android:allowBackup="true"
+25-->D:\Daven\app\src\main\AndroidManifest.xml:12:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.12.0] C:\Users\david\.gradle\caches\transforms-3\b4e4f691e4e9f09b2d7e8876bd9a90e3\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+27        android:dataExtractionRules="@xml/data_extraction_rules"
+27-->D:\Daven\app\src\main\AndroidManifest.xml:13:9-65
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:fullBackupContent="@xml/backup_rules"
+30-->D:\Daven\app\src\main\AndroidManifest.xml:14:9-54
+31        android:icon="@mipmap/ic_launcher"
+31-->D:\Daven\app\src\main\AndroidManifest.xml:15:9-43
+32        android:label="@string/app_name"
+32-->D:\Daven\app\src\main\AndroidManifest.xml:16:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->D:\Daven\app\src\main\AndroidManifest.xml:17:9-54
+34        android:supportsRtl="true"
+34-->D:\Daven\app\src\main\AndroidManifest.xml:18:9-35
+35        android:theme="@style/Theme.Daven" >
+35-->D:\Daven\app\src\main\AndroidManifest.xml:19:9-43
+36
+37        <!-- Splash Activity como launcher -->
+38        <activity
+38-->D:\Daven\app\src\main\AndroidManifest.xml:23:9-31:20
+39            android:name="com.daven.videoplayer.ui.SplashActivity"
+39-->D:\Daven\app\src\main\AndroidManifest.xml:24:13-46
+40            android:exported="true"
+40-->D:\Daven\app\src\main\AndroidManifest.xml:25:13-36
+41            android:theme="@style/Theme.Daven.Splash" >
+41-->D:\Daven\app\src\main\AndroidManifest.xml:26:13-54
+42            <intent-filter>
+42-->D:\Daven\app\src\main\AndroidManifest.xml:27:13-30:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->D:\Daven\app\src\main\AndroidManifest.xml:28:17-69
+43-->D:\Daven\app\src\main\AndroidManifest.xml:28:25-66
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->D:\Daven\app\src\main\AndroidManifest.xml:29:17-77
+45-->D:\Daven\app\src\main\AndroidManifest.xml:29:27-74
+46            </intent-filter>
+47        </activity>
+48        <activity
+48-->D:\Daven\app\src\main\AndroidManifest.xml:33:9-59:20
+49            android:name="com.daven.videoplayer.ui.MainActivity"
+49-->D:\Daven\app\src\main\AndroidManifest.xml:34:13-44
+50            android:exported="true"
+50-->D:\Daven\app\src\main\AndroidManifest.xml:35:13-36
+51            android:theme="@style/Theme.Daven" >
+51-->D:\Daven\app\src\main\AndroidManifest.xml:36:13-47
+52
+53            <!-- Intent filters para ser reproductor predeterminado -->
+54            <intent-filter>
+54-->D:\Daven\app\src\main\AndroidManifest.xml:39:13-46:29
+55                <action android:name="android.intent.action.VIEW" />
+55-->D:\Daven\app\src\main\AndroidManifest.xml:40:17-69
+55-->D:\Daven\app\src\main\AndroidManifest.xml:40:25-66
+56
+57                <category android:name="android.intent.category.DEFAULT" />
+57-->D:\Daven\app\src\main\AndroidManifest.xml:41:17-76
+57-->D:\Daven\app\src\main\AndroidManifest.xml:41:27-73
+58                <category android:name="android.intent.category.BROWSABLE" />
+58-->D:\Daven\app\src\main\AndroidManifest.xml:42:17-78
+58-->D:\Daven\app\src\main\AndroidManifest.xml:42:27-75
 59
 60                <data android:scheme="file" />
-60-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-60-->D:\Daven\app\src\main\AndroidManifest.xml:34:23-44
-61                <data android:mimeType="video/mp4" />
-61-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-61-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-62                <data android:mimeType="video/mkv" />
-62-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-62-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-63                <data android:mimeType="video/avi" />
-63-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-63-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-64                <data android:mimeType="video/mov" />
-64-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-64-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-65                <data android:mimeType="video/3gp" />
-65-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-65-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-66                <data android:mimeType="video/webm" />
-66-->D:\Daven\app\src\main\AndroidManifest.xml:34:17-47
-66-->D:\Daven\app\src\main\AndroidManifest.xml:36:23-49
-67            </intent-filter>
-68        </activity>
-69        <activity
-69-->D:\Daven\app\src\main\AndroidManifest.xml:52:9-57:61
-70            android:name="com.daven.videoplayer.ui.PlayerActivity"
-70-->D:\Daven\app\src\main\AndroidManifest.xml:53:13-46
-71            android:configChanges="orientation|screenSize|keyboardHidden"
-71-->D:\Daven\app\src\main\AndroidManifest.xml:55:13-74
-72            android:exported="false"
-72-->D:\Daven\app\src\main\AndroidManifest.xml:54:13-37
-73            android:screenOrientation="sensor"
-73-->D:\Daven\app\src\main\AndroidManifest.xml:56:13-47
-74            android:theme="@style/Theme.Daven.Fullscreen" />
-74-->D:\Daven\app\src\main\AndroidManifest.xml:57:13-58
-75
-76        <provider
-76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-77            android:name="androidx.startup.InitializationProvider"
-77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-78            android:authorities="com.daven.videoplayer.androidx-startup"
-78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-79            android:exported="false" >
-79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-80            <meta-data
-80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-82                android:value="androidx.startup" />
-82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-83            <meta-data
-83-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\david\.gradle\caches\transforms-3\38c6c834df10227fbe465311401fd21f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-84-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\david\.gradle\caches\transforms-3\38c6c834df10227fbe465311401fd21f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-85                android:value="androidx.startup" />
-85-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\david\.gradle\caches\transforms-3\38c6c834df10227fbe465311401fd21f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-86            <meta-data
-86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-87                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-88                android:value="androidx.startup" />
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-89        </provider>
-90
-91        <receiver
-91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-92            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-93            android:directBootAware="false"
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-94            android:enabled="true"
-94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-95            android:exported="true"
-95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-96            android:permission="android.permission.DUMP" >
-96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-97            <intent-filter>
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-98                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-99            </intent-filter>
-100            <intent-filter>
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-101                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-102            </intent-filter>
-103            <intent-filter>
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-104                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-105            </intent-filter>
-106            <intent-filter>
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-107                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-108            </intent-filter>
-109        </receiver>
-110    </application>
-111
-112</manifest>
+60-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+60-->D:\Daven\app\src\main\AndroidManifest.xml:43:23-44
+61                <data android:scheme="content" />
+61-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+61-->D:\Daven\app\src\main\AndroidManifest.xml:43:23-44
+62                <data android:mimeType="video/*" />
+62-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+62-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+63            </intent-filter>
+64            <intent-filter>
+64-->D:\Daven\app\src\main\AndroidManifest.xml:48:13-58:29
+65                <action android:name="android.intent.action.VIEW" />
+65-->D:\Daven\app\src\main\AndroidManifest.xml:40:17-69
+65-->D:\Daven\app\src\main\AndroidManifest.xml:40:25-66
+66
+67                <category android:name="android.intent.category.DEFAULT" />
+67-->D:\Daven\app\src\main\AndroidManifest.xml:41:17-76
+67-->D:\Daven\app\src\main\AndroidManifest.xml:41:27-73
+68
+69                <data android:scheme="file" />
+69-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+69-->D:\Daven\app\src\main\AndroidManifest.xml:43:23-44
+70                <data android:mimeType="video/mp4" />
+70-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+70-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+71                <data android:mimeType="video/mkv" />
+71-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+71-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+72                <data android:mimeType="video/avi" />
+72-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+72-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+73                <data android:mimeType="video/mov" />
+73-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+73-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+74                <data android:mimeType="video/3gp" />
+74-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+74-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+75                <data android:mimeType="video/webm" />
+75-->D:\Daven\app\src\main\AndroidManifest.xml:43:17-47
+75-->D:\Daven\app\src\main\AndroidManifest.xml:45:23-49
+76            </intent-filter>
+77        </activity>
+78        <activity
+78-->D:\Daven\app\src\main\AndroidManifest.xml:61:9-66:61
+79            android:name="com.daven.videoplayer.ui.PlayerActivity"
+79-->D:\Daven\app\src\main\AndroidManifest.xml:62:13-46
+80            android:configChanges="orientation|screenSize|keyboardHidden"
+80-->D:\Daven\app\src\main\AndroidManifest.xml:64:13-74
+81            android:exported="false"
+81-->D:\Daven\app\src\main\AndroidManifest.xml:63:13-37
+82            android:screenOrientation="sensor"
+82-->D:\Daven\app\src\main\AndroidManifest.xml:65:13-47
+83            android:theme="@style/Theme.Daven.Fullscreen" />
+83-->D:\Daven\app\src\main\AndroidManifest.xml:66:13-58
+84
+85        <!-- Servicio de reproducción en segundo plano -->
+86        <service
+86-->D:\Daven\app\src\main\AndroidManifest.xml:69:9-73:61
+87            android:name="com.daven.videoplayer.service.AudioPlaybackService"
+87-->D:\Daven\app\src\main\AndroidManifest.xml:70:13-57
+88            android:enabled="true"
+88-->D:\Daven\app\src\main\AndroidManifest.xml:71:13-35
+89            android:exported="false"
+89-->D:\Daven\app\src\main\AndroidManifest.xml:72:13-37
+90            android:foregroundServiceType="mediaPlayback" />
+90-->D:\Daven\app\src\main\AndroidManifest.xml:73:13-58
+91
+92        <provider
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+93            android:name="androidx.startup.InitializationProvider"
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+94            android:authorities="com.daven.videoplayer.androidx-startup"
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+95            android:exported="false" >
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+96            <meta-data
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+98                android:value="androidx.startup" />
+98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\david\.gradle\caches\transforms-3\d42d868bcf9db8e66eebe510c8c5548b\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+99            <meta-data
+99-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\david\.gradle\caches\transforms-3\38c6c834df10227fbe465311401fd21f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+100-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\david\.gradle\caches\transforms-3\38c6c834df10227fbe465311401fd21f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+101                android:value="androidx.startup" />
+101-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\david\.gradle\caches\transforms-3\38c6c834df10227fbe465311401fd21f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+103                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+104                android:value="androidx.startup" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+105        </provider>
+106
+107        <receiver
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+108            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+109            android:directBootAware="false"
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+110            android:enabled="true"
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+111            android:exported="true"
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+112            android:permission="android.permission.DUMP" >
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+113            <intent-filter>
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+114                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+115            </intent-filter>
+116            <intent-filter>
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+117                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+118            </intent-filter>
+119            <intent-filter>
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+120                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+121            </intent-filter>
+122            <intent-filter>
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+123                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\david\.gradle\caches\transforms-3\1bc6a633d7e71541c9c7451678e613df\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+124            </intent-filter>
+125        </receiver>
+126    </application>
+127
+128</manifest>

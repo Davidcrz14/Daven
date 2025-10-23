@@ -40,17 +40,23 @@
     <color name="white">#FFFFFF</color>
     <string name="all">Todos</string>
     <string name="app_name">DAVEN</string>
+    <string name="aspect_ratio">Relación de aspecto</string>
+    <string name="audio_only_mode">Modo solo audio</string>
     <string formatted="false" name="duration_format">%02d:%02d</string>
     <string name="favorites">Favoritos</string>
     <string name="folders">Carpetas</string>
     <string name="grant_permission">Conceder permiso</string>
     <string name="loading_videos">Cargando videos...</string>
     <string name="lock_screen">Bloquear pantalla</string>
+    <string name="loop_disabled">Bucle desactivado</string>
+    <string name="loop_enabled">Bucle activado</string>
     <string name="no_videos_found">No se encontraron videos</string>
     <string name="permission_message">DAVEN necesita acceso al almacenamiento para mostrar tus videos</string>
     <string name="permission_required">Permisos requeridos</string>
+    <string name="playing_audio">Reproduciendo audio</string>
     <string name="recent">Recientes</string>
     <string name="search_videos">Buscar videos</string>
+    <string name="unlock_screen">Desbloquear pantalla</string>
     <string name="video_player">Reproductor de Video</string>
     <style name="Theme.Daven" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
@@ -89,5 +95,11 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowBackground">@color/black</item>
+    </style>
+    <style name="Theme.Daven.Splash" parent="Theme.Daven">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 </resources>

@@ -28,17 +28,26 @@ public final class ActivityPlayerBinding implements ViewBinding {
   public final ProgressBar loadingProgress;
 
   @NonNull
+  public final ImageView lockButton;
+
+  @NonNull
+  public final ImageView loopButton;
+
+  @NonNull
   public final PlayerView playerView;
 
   @NonNull
   public final ImageView rotateButton;
 
   private ActivityPlayerBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView backButton,
-      @NonNull ProgressBar loadingProgress, @NonNull PlayerView playerView,
+      @NonNull ProgressBar loadingProgress, @NonNull ImageView lockButton,
+      @NonNull ImageView loopButton, @NonNull PlayerView playerView,
       @NonNull ImageView rotateButton) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.loadingProgress = loadingProgress;
+    this.lockButton = lockButton;
+    this.loopButton = loopButton;
     this.playerView = playerView;
     this.rotateButton = rotateButton;
   }
@@ -82,6 +91,18 @@ public final class ActivityPlayerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lockButton;
+      ImageView lockButton = ViewBindings.findChildViewById(rootView, id);
+      if (lockButton == null) {
+        break missingId;
+      }
+
+      id = R.id.loopButton;
+      ImageView loopButton = ViewBindings.findChildViewById(rootView, id);
+      if (loopButton == null) {
+        break missingId;
+      }
+
       id = R.id.playerView;
       PlayerView playerView = ViewBindings.findChildViewById(rootView, id);
       if (playerView == null) {
@@ -95,7 +116,7 @@ public final class ActivityPlayerBinding implements ViewBinding {
       }
 
       return new ActivityPlayerBinding((ConstraintLayout) rootView, backButton, loadingProgress,
-          playerView, rotateButton);
+          lockButton, loopButton, playerView, rotateButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

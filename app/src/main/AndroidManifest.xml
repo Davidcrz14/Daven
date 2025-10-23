@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -17,14 +19,21 @@
         android:theme="@style/Theme.Daven"
         tools:targetApi="31">
 
+        <!-- Splash Activity como launcher -->
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.Daven">
+            android:theme="@style/Theme.Daven.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Daven">
 
             <!-- Intent filters para ser reproductor predeterminado -->
             <intent-filter>
@@ -55,6 +64,13 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="sensor"
             android:theme="@style/Theme.Daven.Fullscreen" />
+
+        <!-- Servicio de reproducción en segundo plano -->
+        <service
+            android:name=".service.AudioPlaybackService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
 
     </application>
 

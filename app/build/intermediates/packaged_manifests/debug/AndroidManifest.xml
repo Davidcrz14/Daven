@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <permission
@@ -31,15 +33,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Daven" >
+
+        <!-- Splash Activity como launcher -->
         <activity
-            android:name="com.daven.videoplayer.ui.MainActivity"
+            android:name="com.daven.videoplayer.ui.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.Daven" >
+            android:theme="@style/Theme.Daven.Splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.daven.videoplayer.ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Daven" >
 
             <!-- Intent filters para ser reproductor predeterminado -->
             <intent-filter>
@@ -72,6 +81,13 @@
             android:exported="false"
             android:screenOrientation="sensor"
             android:theme="@style/Theme.Daven.Fullscreen" />
+
+        <!-- Servicio de reproducción en segundo plano -->
+        <service
+            android:name="com.daven.videoplayer.service.AudioPlaybackService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

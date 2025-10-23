@@ -14,4 +14,10 @@
     <string name="permission_message">DAVEN necesita acceso al almacenamiento para mostrar tus videos</string>
     <string name="grant_permission">Conceder permiso</string>
     <string name="lock_screen">Bloquear pantalla</string>
+    <string name="unlock_screen">Desbloquear pantalla</string>
+    <string name="loop_enabled">Bucle activado</string>
+    <string name="loop_disabled">Bucle desactivado</string>
+    <string name="aspect_ratio">Relación de aspecto</string>
+    <string name="audio_only_mode">Modo solo audio</string>
+    <string name="playing_audio">Reproduciendo audio</string>
 </resources>

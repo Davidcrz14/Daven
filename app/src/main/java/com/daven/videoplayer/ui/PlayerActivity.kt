@@ -3,9 +3,12 @@ package com.daven.videoplayer.ui
 import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Bundle
+import android.view.GestureDetector
+import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -14,8 +17,10 @@ import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.VideoSize
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.ui.AspectRatioFrameLayout
 import com.daven.videoplayer.R
 import com.daven.videoplayer.databinding.ActivityPlayerBinding
+import kotlin.math.abs
 
 class PlayerActivity : AppCompatActivity() {
 
@@ -25,15 +30,25 @@ class PlayerActivity : AppCompatActivity() {
     private var playbackPosition = 0L
     private var playWhenReady = true
 
+    // Nuevas variables para funcionalidades
+    private var isLoopEnabled = false
+    private var isLocked = false
+    private var currentAspectRatio = AspectRatioFrameLayout.RESIZE_MODE_FIT
+    private lateinit var gestureDetector: GestureDetectorCompat
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPlayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupFullscreen()
+        setupGestureDetector()
         setupClickListeners()
 
         val videoUri = intent.getStringExtra("video_uri")
+        val videoTitle = intent.getStringExtra("video_title") ?: "Video"
 
         if (videoUri != null) {
             initializePlayer(Uri.parse(videoUri))
@@ -64,7 +79,148 @@ class PlayerActivity : AppCompatActivity() {
         binding.rotateButton.setOnClickListener {
             toggleOrientation()
         }
+
+        binding.lockButton.setOnClickListener {
+            toggleLock()
+        }
+
+        binding.loopButton.setOnClickListener {
+            toggleLoop()
+        }
+
+        // Configurar listener para mostrar/ocultar controles al tocar la pantalla
+        binding.playerView.setControllerVisibilityListener(
+            androidx.media3.ui.PlayerView.ControllerVisibilityListener { visibility ->
+                // Sincronizar visibilidad de botones personalizados con controles de ExoPlayer
+                if (!isLocked) {
+                    val isVisible = visibility == View.VISIBLE
+                    binding.backButton.visibility = if (isVisible) View.VISIBLE else View.GONE
+                    binding.rotateButton.visibility = if (isVisible) View.VISIBLE else View.GONE
+                }
+            }
+        )
     }
+
+    private fun setupGestureDetector() {
+        gestureDetector = GestureDetectorCompat(this, object : GestureDetector.SimpleOnGestureListener() {
+
+            private var totalDistanceX = 0f
+            private var totalDistanceY = 0f
+            private var isVerticalGesture = false
+            private var isHorizontalGesture = false
+
+            override fun onDown(e: MotionEvent): Boolean {
+                totalDistanceX = 0f
+                totalDistanceY = 0f
+                isVerticalGesture = false
+                isHorizontalGesture = false
+                return true
+            }
+
+            override fun onScroll(
+                e1: MotionEvent?,
+                e2: MotionEvent,
+                distanceX: Float,
+                distanceY: Float
+            ): Boolean {
+                if (isLocked) return false
+
+                totalDistanceX += abs(distanceX)
+                totalDistanceY += abs(distanceY)
+
+                // Determinar si es gesto vertical u horizontal
+                if (!isVerticalGesture && !isHorizontalGesture) {
+                    if (totalDistanceY > totalDistanceX && totalDistanceY > 30) {
+                        isVerticalGesture = true
+                    } else if (totalDistanceX > totalDistanceY && totalDistanceX > 30) {
+                        isHorizontalGesture = true
+                    }
+                }
+
+                if (isVerticalGesture) {
+                    // Gesto vertical: ajustar brillo
+                    val screenWidth = binding.root.width
+                    if (e2.x < screenWidth / 2) {
+                        // Lado izquierdo: brillo
+                        adjustBrightness(-distanceY)
+                    } else {
+                        // Lado derecho: brillo también (simplificado)
+                        adjustBrightness(-distanceY)
+                    }
+                } else if (isHorizontalGesture) {
+                    // Gesto horizontal: avanzar/retroceder
+                    seekVideo(-distanceX)
+                }
+
+                return true
+            }
+
+            override fun onDoubleTap(e: MotionEvent): Boolean {
+                if (isLocked) return false
+
+                val screenWidth = binding.root.width
+                player?.let {
+                    if (e.x < screenWidth / 3) {
+                        // Doble tap izquierdo: retroceder 10s
+                        it.seekTo((it.currentPosition - 10000).coerceAtLeast(0))
+                    } else if (e.x > screenWidth * 2 / 3) {
+                        // Doble tap derecho: avanzar 10s
+                        it.seekTo((it.currentPosition + 10000).coerceAtMost(it.duration))
+                    } else {
+                        // Doble tap centro: play/pause
+                        if (it.isPlaying) it.pause() else it.play()
+                    }
+                }
+                return true
+            }
+
+
+        })
+
+        // Configurar gestos personalizados
+        binding.playerView.setOnTouchListener { view, event ->
+            gestureDetector.onTouchEvent(event)
+            false // Siempre permitir que PlayerView maneje el evento también
+        }
+    }
+
+    private fun adjustBrightness(delta: Float) {
+        val layoutParams = window.attributes
+        layoutParams.screenBrightness = (layoutParams.screenBrightness + delta / 1000f).coerceIn(0f, 1f)
+        window.attributes = layoutParams
+    }
+
+
+
+    private fun seekVideo(delta: Float) {
+        player?.let {
+            val seekAmount = (delta * 100).toLong()
+            val newPosition = (it.currentPosition + seekAmount).coerceIn(0, it.duration)
+            it.seekTo(newPosition)
+        }
+    }
+
+    private fun toggleLock() {
+        isLocked = !isLocked
+        binding.lockButton.setImageResource(
+            if (isLocked) R.drawable.ic_lock else R.drawable.ic_lock_open
+        )
+
+        // Ocultar/mostrar controles
+        binding.backButton.visibility = if (isLocked) View.GONE else View.VISIBLE
+        binding.rotateButton.visibility = if (isLocked) View.GONE else View.VISIBLE
+        binding.loopButton.visibility = if (isLocked) View.GONE else View.GONE
+        binding.playerView.useController = !isLocked
+    }
+
+    private fun toggleLoop() {
+        isLoopEnabled = !isLoopEnabled
+        player?.repeatMode = if (isLoopEnabled) Player.REPEAT_MODE_ONE else Player.REPEAT_MODE_OFF
+
+        binding.loopButton.alpha = if (isLoopEnabled) 1f else 0.5f
+    }
+
+
 
     private fun toggleOrientation() {
         requestedOrientation = when (requestedOrientation) {
@@ -166,6 +322,5 @@ class PlayerActivity : AppCompatActivity() {
         }
         player = null
     }
-
-
 }
+

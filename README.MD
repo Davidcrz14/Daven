@@ -15,6 +15,13 @@
 | **Interfaz Moderna Minimalista** | Diseño limpio con tonos azules pastel oscuros y Material Design 3 | ✅ Implementado |
 | **Filtros por Chips** | Sistema de filtros modernos por categorías (Todos, Recientes, Carpetas) | ✅ Implementado |
 | **Detección Automática de Orientación** | El reproductor detecta si el video es vertical u horizontal | ✅ Implementado |
+| **Reproducción de Audio en Segundo Plano** | Escucha el audio del video con la pantalla apagada | ✅ Implementado |
+| **Repetir Video/Bucle** | Reproduce el mismo video continuamente | ✅ Implementado |
+| **Gestos Táctiles** | Deslizar para ajustar volumen, brillo, avanzar/retroceder | ✅ Implementado |
+| **Zoom y Recorte** | Ajusta el aspecto del video (16:9, 4:3, llenar pantalla, ajustar) | ✅ Implementado |
+| **Presentación Animada** | Splash screen con animación de entrada | ✅ Implementado |
+| **Aplicación Predeterminada** | Configurable como reproductor de video predeterminado del sistema | ✅ Implementado |
+| **Lista Vertical Fija** | Todos los videos se muestran en orientación vertical en la lista | ✅ Implementado |
 
 ## 🛠️ Tecnologías
 
@@ -38,6 +45,11 @@
 - **Sistema de favoritos** con indicador visual
 - **Detección automática de orientación** del video
 - **Interfaz responsive** optimizada para diferentes tamaños de pantalla
+- **Gestos táctiles intuitivos** para control de volumen, brillo y navegación
+- **Zoom y ajuste de aspecto** con múltiples opciones de visualización
+- **Splash screen animado** con transición fluida
+- **Reproducción en segundo plano** con controles de notificación
+- **Modo bucle** para reproducción continua
 
 ## 🎯 Objetivos del Proyecto
 
@@ -81,10 +93,8 @@ app/
 ## 🔮 Próximas Funcionalidades
 
 ### 🎬 Reproducción Avanzada
-- **Reproducción de audio en segundo plano** - Escucha el audio del video con la pantalla apagada
 - **Controles de velocidad de reproducción** - 0.25x, 0.5x, 0.75x, 1x, 1.25x, 1.5x, 1.75x, 2x
 - **Modo PiP (Picture in Picture)** - Mira videos mientras usas otras apps
-- **Repetir video/bucle** - Reproduce el mismo video continuamente
 - **Saltar intro/outro** - Botones para saltar segmentos predefinidos
 - **Marcadores de tiempo** - Guarda puntos específicos del video
 
@@ -98,8 +108,6 @@ app/
 
 ### 🎨 Personalización Visual
 - **Temas personalizables** - Claro, oscuro, AMOLED, colores personalizados
-- **Gestos táctiles** - Deslizar para volumen, brillo, avanzar/retroceder
-- **Zoom y recorte** - Ajusta el aspecto del video (16:9, 4:3, llenar pantalla)
 - **Filtros de video** - Brillo, contraste, saturación, temperatura de color
 - **Modo nocturno** - Reduce el brillo automáticamente
 
@@ -148,4 +156,3 @@ app/
 - **Widget de pantalla de inicio** - Acceso rápido a videos recientes
 - **Accesos directos** - Atajos a carpetas o playlists
 - **Compartir desde otras apps** - Abre videos compartidos directamente
-- **Establecer como predeterminado** - Para todos los formatos de video
