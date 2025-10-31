@@ -1,11 +1,14 @@
 package com.daven.videoplayer.repository
 
+import android.app.RecoverableSecurityException
 import android.content.ContentResolver
+import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
 import com.daven.videoplayer.model.Video
+import com.daven.videoplayer.viewmodel.RenameResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -96,5 +99,53 @@ class VideoRepository(private val context: Context) {
             it.title.contains(query, ignoreCase = true) ||
             it.displayName.contains(query, ignoreCase = true)
         }
+    }
+
+    suspend fun renameVideo(video: Video, newName: String): RenameResult = withContext(Dispatchers.IO) {
+        val trimmed = newName.trim()
+        if (trimmed.isBlank()) return@withContext RenameResult.InvalidName
+
+        val extension = video.displayName.substringAfterLast('.', "")
+        val baseName = if (extension.isNotBlank() && trimmed.endsWith(".$extension", ignoreCase = true)) {
+            trimmed.substringBeforeLast('.')
+        } else {
+            trimmed
+        }
+
+        val finalDisplayName = if (extension.isNotBlank()) "$baseName.$extension" else baseName
+        val titleWithoutExtension = if (extension.isNotBlank()) baseName else finalDisplayName
+
+        val values = ContentValues().apply {
+            put(MediaStore.Video.Media.DISPLAY_NAME, finalDisplayName)
+            put(MediaStore.Video.Media.TITLE, titleWithoutExtension)
+        }
+
+        return@withContext try {
+            val updatedRows = contentResolver.update(video.uri, values, null, null)
+            if (updatedRows > 0) {
+                val updatedPath = buildUpdatedPath(video.path, finalDisplayName)
+                val updatedVideo = video.copy(
+                    title = baseName,
+                    displayName = finalDisplayName,
+                    path = updatedPath
+                )
+                RenameResult.Success(updatedVideo)
+            } else {
+                RenameResult.Failure()
+            }
+        } catch (recoverable: RecoverableSecurityException) {
+            val intentSender = recoverable.userAction.actionIntent.intentSender
+            RenameResult.RequiresPermission(intentSender)
+        } catch (security: SecurityException) {
+            RenameResult.Failure(security)
+        } catch (throwable: Throwable) {
+            RenameResult.Failure(throwable)
+        }
+    }
+
+    private fun buildUpdatedPath(originalPath: String, displayName: String): String {
+        val lastSlashIndex = originalPath.lastIndexOf('/')
+        if (lastSlashIndex < 0) return displayName
+        return originalPath.substring(0, lastSlashIndex + 1) + displayName
     }
 }

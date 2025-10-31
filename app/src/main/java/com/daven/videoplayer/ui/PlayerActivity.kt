@@ -12,14 +12,18 @@ import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.media3.common.PlaybackParameters
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.VideoSize
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.AspectRatioFrameLayout
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.list.listItemsSingleChoice
 import com.daven.videoplayer.R
 import com.daven.videoplayer.databinding.ActivityPlayerBinding
+import com.google.android.material.snackbar.Snackbar
 import kotlin.math.abs
 
 class PlayerActivity : AppCompatActivity() {
@@ -33,8 +37,19 @@ class PlayerActivity : AppCompatActivity() {
     // Nuevas variables para funcionalidades
     private var isLoopEnabled = false
     private var isLocked = false
-    private var currentAspectRatio = AspectRatioFrameLayout.RESIZE_MODE_FIT
     private lateinit var gestureDetector: GestureDetectorCompat
+
+    private val speedValues = floatArrayOf(0.5f, 0.75f, 1f, 1.25f, 1.5f, 2f)
+    private lateinit var speedLabels: Array<String>
+    private var currentSpeedIndex = 2
+
+    private val aspectModes = intArrayOf(
+        AspectRatioFrameLayout.RESIZE_MODE_FIT,
+        AspectRatioFrameLayout.RESIZE_MODE_FILL,
+        AspectRatioFrameLayout.RESIZE_MODE_ZOOM
+    )
+    private lateinit var aspectLabels: Array<String>
+    private var currentAspectIndex = 0
 
 
 
@@ -43,12 +58,18 @@ class PlayerActivity : AppCompatActivity() {
         binding = ActivityPlayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        speedLabels = resources.getStringArray(R.array.playback_speed_labels)
+        aspectLabels = resources.getStringArray(R.array.aspect_ratio_labels)
+        currentSpeedIndex = speedValues.indexOfFirst { it == 1f }.takeIf { it >= 0 } ?: 2
+        binding.speedChip.text = getString(R.string.speed_chip_label, speedValues[currentSpeedIndex])
+        binding.speedChip.contentDescription = getString(R.string.speed_button_description, speedValues[currentSpeedIndex])
+        binding.playerView.resizeMode = aspectModes[currentAspectIndex]
+
         setupFullscreen()
         setupGestureDetector()
         setupClickListeners()
 
         val videoUri = intent.getStringExtra("video_uri")
-        val videoTitle = intent.getStringExtra("video_title") ?: "Video"
 
         if (videoUri != null) {
             initializePlayer(Uri.parse(videoUri))
@@ -88,6 +109,14 @@ class PlayerActivity : AppCompatActivity() {
             toggleLoop()
         }
 
+        binding.aspectButton.setOnClickListener {
+            cycleAspectRatio()
+        }
+
+        binding.speedChip.setOnClickListener {
+            showSpeedDialog()
+        }
+
         // Configurar listener para mostrar/ocultar controles al tocar la pantalla
         binding.playerView.setControllerVisibilityListener(
             androidx.media3.ui.PlayerView.ControllerVisibilityListener { visibility ->
@@ -96,6 +125,7 @@ class PlayerActivity : AppCompatActivity() {
                     val isVisible = visibility == View.VISIBLE
                     binding.backButton.visibility = if (isVisible) View.VISIBLE else View.GONE
                     binding.rotateButton.visibility = if (isVisible) View.VISIBLE else View.GONE
+                    binding.playerBottomActions.visibility = if (isVisible) View.VISIBLE else View.GONE
                 }
             }
         )
@@ -207,10 +237,16 @@ class PlayerActivity : AppCompatActivity() {
         )
 
         // Ocultar/mostrar controles
-        binding.backButton.visibility = if (isLocked) View.GONE else View.VISIBLE
-        binding.rotateButton.visibility = if (isLocked) View.GONE else View.VISIBLE
-        binding.loopButton.visibility = if (isLocked) View.GONE else View.GONE
+        val visibility = if (isLocked) View.GONE else View.VISIBLE
+        binding.backButton.visibility = visibility
+        binding.rotateButton.visibility = visibility
+        binding.playerBottomActions.visibility = visibility
+        if (!isLocked) {
+            binding.loopButton.alpha = if (isLoopEnabled) 1f else 0.5f
+        }
         binding.playerView.useController = !isLocked
+        val message = if (isLocked) R.string.controls_locked else R.string.controls_unlocked
+        Snackbar.make(binding.root, getString(message), Snackbar.LENGTH_SHORT).show()
     }
 
     private fun toggleLoop() {
@@ -218,6 +254,47 @@ class PlayerActivity : AppCompatActivity() {
         player?.repeatMode = if (isLoopEnabled) Player.REPEAT_MODE_ONE else Player.REPEAT_MODE_OFF
 
         binding.loopButton.alpha = if (isLoopEnabled) 1f else 0.5f
+        val message = if (isLoopEnabled) R.string.loop_enabled else R.string.loop_disabled
+        Snackbar.make(binding.root, getString(message), Snackbar.LENGTH_SHORT).show()
+    }
+
+
+    private fun cycleAspectRatio() {
+        currentAspectIndex = (currentAspectIndex + 1) % aspectModes.size
+        val mode = aspectModes[currentAspectIndex]
+        binding.playerView.resizeMode = mode
+        Snackbar.make(
+            binding.root,
+            getString(R.string.aspect_updated, aspectLabels[currentAspectIndex]),
+            Snackbar.LENGTH_SHORT
+        ).show()
+    }
+
+    private fun showSpeedDialog() {
+        MaterialDialog(this).show {
+            title(res = R.string.speed_dialog_title)
+            listItemsSingleChoice(
+                items = speedLabels.toList(),
+                initialSelection = currentSpeedIndex,
+                waitForPositiveButton = false
+            ) { _, index, _ ->
+                currentSpeedIndex = index
+                applyPlaybackSpeed(speedValues[index])
+            }
+            negativeButton(res = android.R.string.cancel)
+        }
+    }
+
+    private fun applyPlaybackSpeed(speed: Float) {
+        val pitch = player?.playbackParameters?.pitch ?: 1f
+        player?.playbackParameters = PlaybackParameters(speed, pitch)
+        binding.speedChip.text = getString(R.string.speed_chip_label, speed)
+        binding.speedChip.contentDescription = getString(R.string.speed_button_description, speed)
+        Snackbar.make(
+            binding.root,
+            getString(R.string.speed_updated, speed),
+            Snackbar.LENGTH_SHORT
+        ).show()
     }
 
 

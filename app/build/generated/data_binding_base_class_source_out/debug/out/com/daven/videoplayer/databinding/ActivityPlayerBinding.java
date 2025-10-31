@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +14,7 @@ import androidx.media3.ui.PlayerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.daven.videoplayer.R;
+import com.google.android.material.chip.Chip;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,6 +22,9 @@ import java.lang.String;
 public final class ActivityPlayerBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageView aspectButton;
 
   @NonNull
   public final ImageView backButton;
@@ -34,22 +39,32 @@ public final class ActivityPlayerBinding implements ViewBinding {
   public final ImageView loopButton;
 
   @NonNull
+  public final LinearLayout playerBottomActions;
+
+  @NonNull
   public final PlayerView playerView;
 
   @NonNull
   public final ImageView rotateButton;
 
-  private ActivityPlayerBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView backButton,
-      @NonNull ProgressBar loadingProgress, @NonNull ImageView lockButton,
-      @NonNull ImageView loopButton, @NonNull PlayerView playerView,
-      @NonNull ImageView rotateButton) {
+  @NonNull
+  public final Chip speedChip;
+
+  private ActivityPlayerBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView aspectButton,
+      @NonNull ImageView backButton, @NonNull ProgressBar loadingProgress,
+      @NonNull ImageView lockButton, @NonNull ImageView loopButton,
+      @NonNull LinearLayout playerBottomActions, @NonNull PlayerView playerView,
+      @NonNull ImageView rotateButton, @NonNull Chip speedChip) {
     this.rootView = rootView;
+    this.aspectButton = aspectButton;
     this.backButton = backButton;
     this.loadingProgress = loadingProgress;
     this.lockButton = lockButton;
     this.loopButton = loopButton;
+    this.playerBottomActions = playerBottomActions;
     this.playerView = playerView;
     this.rotateButton = rotateButton;
+    this.speedChip = speedChip;
   }
 
   @Override
@@ -79,6 +94,12 @@ public final class ActivityPlayerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.aspectButton;
+      ImageView aspectButton = ViewBindings.findChildViewById(rootView, id);
+      if (aspectButton == null) {
+        break missingId;
+      }
+
       id = R.id.backButton;
       ImageView backButton = ViewBindings.findChildViewById(rootView, id);
       if (backButton == null) {
@@ -103,6 +124,12 @@ public final class ActivityPlayerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.playerBottomActions;
+      LinearLayout playerBottomActions = ViewBindings.findChildViewById(rootView, id);
+      if (playerBottomActions == null) {
+        break missingId;
+      }
+
       id = R.id.playerView;
       PlayerView playerView = ViewBindings.findChildViewById(rootView, id);
       if (playerView == null) {
@@ -115,8 +142,15 @@ public final class ActivityPlayerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPlayerBinding((ConstraintLayout) rootView, backButton, loadingProgress,
-          lockButton, loopButton, playerView, rotateButton);
+      id = R.id.speedChip;
+      Chip speedChip = ViewBindings.findChildViewById(rootView, id);
+      if (speedChip == null) {
+        break missingId;
+      }
+
+      return new ActivityPlayerBinding((ConstraintLayout) rootView, aspectButton, backButton,
+          loadingProgress, lockButton, loopButton, playerBottomActions, playerView, rotateButton,
+          speedChip);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

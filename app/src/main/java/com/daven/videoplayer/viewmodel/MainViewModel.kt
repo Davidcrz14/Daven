@@ -21,6 +21,7 @@ class MainViewModel(private val repository: VideoRepository) : ViewModel() {
 
     private var allVideos: List<Video> = emptyList()
     private var currentFilter = "all"
+    private var currentQuery = ""
 
     fun loadVideos() {
         viewModelScope.launch {
@@ -42,13 +43,27 @@ class MainViewModel(private val repository: VideoRepository) : ViewModel() {
         applyCurrentFilter()
     }
 
+    fun updateSearchQuery(query: String) {
+        currentQuery = query
+        applyCurrentFilter()
+    }
+
     private fun applyCurrentFilter() {
-        _videos.value = when (currentFilter) {
+        var filtered = when (currentFilter) {
             "recent" -> allVideos.sortedByDescending { it.dateAdded }.take(20)
             "favorites" -> allVideos.filter { it.isFavorite }
             "folders" -> allVideos.groupBy { it.folder }.values.flatten()
             else -> allVideos
         }
+
+        if (currentQuery.isNotBlank()) {
+            filtered = filtered.filter {
+                it.title.contains(currentQuery, ignoreCase = true) ||
+                it.displayName.contains(currentQuery, ignoreCase = true)
+            }
+        }
+
+        _videos.value = filtered
     }
 
     fun toggleFavorite(video: Video) {
@@ -59,17 +74,23 @@ class MainViewModel(private val repository: VideoRepository) : ViewModel() {
         applyCurrentFilter()
     }
 
-    fun searchVideos(query: String) {
+    fun renameVideo(video: Video, newName: String, onResult: (RenameResult) -> Unit) {
         viewModelScope.launch {
-            _isLoading.value = true
-            try {
-                val searchResults = repository.searchVideos(query)
-                _videos.value = searchResults
-            } catch (e: Exception) {
-                _videos.value = emptyList()
-            } finally {
-                _isLoading.value = false
+            val result = repository.renameVideo(video, newName)
+
+            if (result is RenameResult.Success) {
+                val updatedVideo = result.updatedVideo
+                allVideos = allVideos.map { existing ->
+                    if (existing.id == updatedVideo.id) {
+                        updatedVideo
+                    } else {
+                        existing
+                    }
+                }
+                applyCurrentFilter()
             }
+
+            onResult(result)
         }
     }
 }

@@ -8,6 +8,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -18,6 +19,8 @@ import com.daven.videoplayer.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.search.SearchBar;
+import com.google.android.material.search.SearchView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -39,6 +42,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final LinearLayout emptyStateLayout;
 
   @NonNull
+  public final TextView emptyStateMessage;
+
+  @NonNull
   public final ImageView favoriteButton;
 
   @NonNull
@@ -51,7 +57,13 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ProgressBar loadingProgress;
 
   @NonNull
-  public final ImageView searchButton;
+  public final SearchBar searchBar;
+
+  @NonNull
+  public final RecyclerView searchSuggestionsRecyclerView;
+
+  @NonNull
+  public final SearchView searchView;
 
   @NonNull
   public final MaterialToolbar topAppBar;
@@ -61,20 +73,24 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Chip chipAll,
       @NonNull Chip chipFolders, @NonNull Chip chipRecent, @NonNull LinearLayout emptyStateLayout,
-      @NonNull ImageView favoriteButton, @NonNull ChipGroup filterChips,
-      @NonNull HorizontalScrollView filterScrollView, @NonNull ProgressBar loadingProgress,
-      @NonNull ImageView searchButton, @NonNull MaterialToolbar topAppBar,
-      @NonNull RecyclerView videosRecyclerView) {
+      @NonNull TextView emptyStateMessage, @NonNull ImageView favoriteButton,
+      @NonNull ChipGroup filterChips, @NonNull HorizontalScrollView filterScrollView,
+      @NonNull ProgressBar loadingProgress, @NonNull SearchBar searchBar,
+      @NonNull RecyclerView searchSuggestionsRecyclerView, @NonNull SearchView searchView,
+      @NonNull MaterialToolbar topAppBar, @NonNull RecyclerView videosRecyclerView) {
     this.rootView = rootView;
     this.chipAll = chipAll;
     this.chipFolders = chipFolders;
     this.chipRecent = chipRecent;
     this.emptyStateLayout = emptyStateLayout;
+    this.emptyStateMessage = emptyStateMessage;
     this.favoriteButton = favoriteButton;
     this.filterChips = filterChips;
     this.filterScrollView = filterScrollView;
     this.loadingProgress = loadingProgress;
-    this.searchButton = searchButton;
+    this.searchBar = searchBar;
+    this.searchSuggestionsRecyclerView = searchSuggestionsRecyclerView;
+    this.searchView = searchView;
     this.topAppBar = topAppBar;
     this.videosRecyclerView = videosRecyclerView;
   }
@@ -130,6 +146,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.emptyStateMessage;
+      TextView emptyStateMessage = ViewBindings.findChildViewById(rootView, id);
+      if (emptyStateMessage == null) {
+        break missingId;
+      }
+
       id = R.id.favoriteButton;
       ImageView favoriteButton = ViewBindings.findChildViewById(rootView, id);
       if (favoriteButton == null) {
@@ -154,9 +176,21 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.searchButton;
-      ImageView searchButton = ViewBindings.findChildViewById(rootView, id);
-      if (searchButton == null) {
+      id = R.id.searchBar;
+      SearchBar searchBar = ViewBindings.findChildViewById(rootView, id);
+      if (searchBar == null) {
+        break missingId;
+      }
+
+      id = R.id.searchSuggestionsRecyclerView;
+      RecyclerView searchSuggestionsRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (searchSuggestionsRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.searchView;
+      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
+      if (searchView == null) {
         break missingId;
       }
 
@@ -173,8 +207,9 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, chipAll, chipFolders, chipRecent,
-          emptyStateLayout, favoriteButton, filterChips, filterScrollView, loadingProgress,
-          searchButton, topAppBar, videosRecyclerView);
+          emptyStateLayout, emptyStateMessage, favoriteButton, filterChips, filterScrollView,
+          loadingProgress, searchBar, searchSuggestionsRecyclerView, searchView, topAppBar,
+          videosRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

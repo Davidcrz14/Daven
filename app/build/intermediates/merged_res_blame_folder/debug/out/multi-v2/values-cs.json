@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.daven.videoplayer.app-mergeDebugResources-44:/values-cs/values-cs.xml",
+            "outputFile": "com.daven.videoplayer.app-mergeDebugResources-46:/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\david\\.gradle\\caches\\transforms-3\\be82d53d5a08953f1129fbc33884f565\\transformed\\media3-session-1.2.1\\res\\values-cs\\values-cs.xml",

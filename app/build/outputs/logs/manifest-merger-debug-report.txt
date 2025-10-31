@@ -8,6 +8,8 @@ MERGED from [androidx.databinding:databinding-adapters:8.2.0] C:\Users\david\.gr
 MERGED from [androidx.databinding:databinding-ktx:8.2.0] C:\Users\david\.gradle\caches\transforms-3\4f202eddd3eabff62ee23e1385077b71\transformed\databinding-ktx-8.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.2.0] C:\Users\david\.gradle\caches\transforms-3\3f2fb630c3ce2c6f98b6424dc7851b96\transformed\databinding-runtime-8.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\david\.gradle\caches\transforms-3\869bb4d19ee4c36a93926d26e2a1931d\transformed\viewbinding-8.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] C:\Users\david\.gradle\caches\transforms-3\1862830cf7a24fb012daf7d401a563df\transformed\input-3.3.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\david\.gradle\caches\transforms-3\c878dd3f47c2bd881f849fd207c41979\transformed\core-3.3.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\david\.gradle\caches\transforms-3\b3c26563262647bf3dcf127733e5ba7c\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\david\.gradle\caches\transforms-3\a995b2529a50067cac7336527d317b5e\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\david\.gradle\caches\transforms-3\c421056f1bb9e13ca4f7241936faee68\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -103,6 +105,10 @@ ADDED from D:\Daven\app\src\main\AndroidManifest.xml:9:5-77
 application
 ADDED from D:\Daven\app\src\main\AndroidManifest.xml:11:5-75:19
 INJECTED from D:\Daven\app\src\main\AndroidManifest.xml:11:5-75:19
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] C:\Users\david\.gradle\caches\transforms-3\1862830cf7a24fb012daf7d401a563df\transformed\input-3.3.0\AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] C:\Users\david\.gradle\caches\transforms-3\1862830cf7a24fb012daf7d401a563df\transformed\input-3.3.0\AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\david\.gradle\caches\transforms-3\c878dd3f47c2bd881f849fd207c41979\transformed\core-3.3.0\AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\david\.gradle\caches\transforms-3\c878dd3f47c2bd881f849fd207c41979\transformed\core-3.3.0\AndroidManifest.xml:11:5-47
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\david\.gradle\caches\transforms-3\b3c26563262647bf3dcf127733e5ba7c\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\david\.gradle\caches\transforms-3\b3c26563262647bf3dcf127733e5ba7c\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\david\.gradle\caches\transforms-3\a995b2529a50067cac7336527d317b5e\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -223,6 +229,10 @@ MERGED from [androidx.databinding:databinding-runtime:8.2.0] C:\Users\david\.gra
 MERGED from [androidx.databinding:databinding-runtime:8.2.0] C:\Users\david\.gradle\caches\transforms-3\3f2fb630c3ce2c6f98b6424dc7851b96\transformed\databinding-runtime-8.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\david\.gradle\caches\transforms-3\869bb4d19ee4c36a93926d26e2a1931d\transformed\viewbinding-8.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.2.0] C:\Users\david\.gradle\caches\transforms-3\869bb4d19ee4c36a93926d26e2a1931d\transformed\viewbinding-8.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] C:\Users\david\.gradle\caches\transforms-3\1862830cf7a24fb012daf7d401a563df\transformed\input-3.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] C:\Users\david\.gradle\caches\transforms-3\1862830cf7a24fb012daf7d401a563df\transformed\input-3.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\david\.gradle\caches\transforms-3\c878dd3f47c2bd881f849fd207c41979\transformed\core-3.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\david\.gradle\caches\transforms-3\c878dd3f47c2bd881f849fd207c41979\transformed\core-3.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\david\.gradle\caches\transforms-3\b3c26563262647bf3dcf127733e5ba7c\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\david\.gradle\caches\transforms-3\b3c26563262647bf3dcf127733e5ba7c\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\david\.gradle\caches\transforms-3\a995b2529a50067cac7336527d317b5e\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41

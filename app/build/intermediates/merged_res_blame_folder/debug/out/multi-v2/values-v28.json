@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.daven.videoplayer.app-mergeDebugResources-44:/values-v28/values-v28.xml",
+            "outputFile": "com.daven.videoplayer.app-mergeDebugResources-46:/values-v28/values-v28.xml",
             "map": [
                 {
                     "source": "C:\\Users\\david\\.gradle\\caches\\transforms-3\\b3c26563262647bf3dcf127733e5ba7c\\transformed\\material-1.11.0\\res\\values-v28\\values-v28.xml",

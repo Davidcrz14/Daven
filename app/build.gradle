@@ -59,6 +59,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
 
+    // Material dialogs for UI enhancements
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
+    implementation 'com.afollestad.material-dialogs:input:3.3.0'
+
     // Permissions
     implementation 'androidx.activity:activity-ktx:1.8.2'
 

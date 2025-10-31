@@ -57,28 +57,61 @@
         android:src="@drawable/ic_lock_open"
         android:background="@drawable/player_button_background"
         android:padding="10dp"
-        android:layout_margin="16dp"
-        android:visibility="gone"
-        app:tint="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/backButton"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="Lock controls" />
-
-    <!-- Loop Button -->
-    <ImageView
-        android:id="@+id/loopButton"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:src="@drawable/ic_rotate"
-        android:background="@drawable/player_button_background"
-        android:padding="10dp"
-        android:layout_margin="16dp"
-        android:alpha="0.5"
-        android:visibility="gone"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
         app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="Loop video" />
+        android:contentDescription="Lock controls" />
+
+    <!-- Bottom Action Bar -->
+    <LinearLayout
+        android:id="@+id/playerBottomActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/rotateButton"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/loopButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_rotate"
+            android:background="@drawable/player_button_background"
+            android:padding="10dp"
+            android:alpha="0.5"
+            app:tint="@color/white"
+            android:contentDescription="@string/loop_button" />
+
+        <ImageView
+            android:id="@+id/aspectButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_fullscreen"
+            android:background="@drawable/player_button_background"
+            android:padding="10dp"
+            app:tint="@color/white"
+            android:contentDescription="@string/aspect_button" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/speedChip"
+            style="@style/Widget.Material3.Chip.Assist.Elevated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="false"
+            android:text="@string/initial_speed_label"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/accent_blue"
+            app:rippleColor="@color/accent_blue" />
+
+    </LinearLayout>
 
     <!-- Loading Progress -->
     <ProgressBar
